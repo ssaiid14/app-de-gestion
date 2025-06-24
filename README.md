@@ -1,8 +1,3 @@
----
-
-### ✅ `README.md` actualizado según tu proyecto actual
-
-```markdown
 # 📦 App de Gestión
 
 Aplicación modular en desarrollo que incluye:
