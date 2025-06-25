@@ -1,6 +1,6 @@
-// Componente ReporteChart
-export const ReporteChart = ({ data }) => {
-  // Datos de ejemplo para el gráfico
+import Card from '../common/Card'
+
+const ReporteCharts = ({ data }) => {
   const chartData = data || [
     { mes: 'Enero', completados: 4, pendientes: 2 },
     { mes: 'Febrero', completados: 6, pendientes: 1 },
@@ -8,18 +8,17 @@ export const ReporteChart = ({ data }) => {
     { mes: 'Abril', completados: 5, pendientes: 2 },
     { mes: 'Mayo', completados: 9, pendientes: 1 },
     { mes: 'Junio', completados: 7, pendientes: 2 },
-  ];
+  ]
 
   const maxValue = Math.max(
     ...chartData.flatMap(d => [d.completados, d.pendientes])
-  );
+  )
 
   return (
     <Card>
-      <CardHeader>
-        <CardTitle>Estadísticas de Reportes</CardTitle>
-      </CardHeader>
-      <CardContent>
+      <div className="p-6">
+        <h3 className="text-lg font-semibold text-gray-900 mb-6">Estadísticas de Reportes</h3>
+        
         <div className="space-y-4">
           {chartData.map((item, index) => (
             <div key={index} className="space-y-2">
@@ -83,7 +82,9 @@ export const ReporteChart = ({ data }) => {
             </div>
           </div>
         </div>
-      </CardContent>
+      </div>
     </Card>
-  );
-};
+  )
+}
+
+export default ReporteCharts

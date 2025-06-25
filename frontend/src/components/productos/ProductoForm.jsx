@@ -198,4 +198,4 @@ const ProductoForm = ({ product, onClose }) => {
   )
 }
 
-export default ProductoForm="Nombre del Producto"
+export default ProductoForm
